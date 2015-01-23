@@ -1,0 +1,58 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+
+<style >  
+#ana_div {
+	  height: 800px;
+	  width: 1150px;
+    margin-left: 50px;
+	  background-color: #312de1; }
+.div {
+	  float: left;
+	  height: 300px;
+	  width: 555px;
+	  margin: 10px;
+	  background-color: #abcdef; }
+.div1{
+	  float: left;
+	  height: 300px;
+	  width: 250px;
+	  margin: 10px;
+	  background-color: #abcdef; }
+				con.commit();
+</style>
+
+</head>
+<title> Person_Dep </title>
+<body bgcolor="#f1f1f1" >
+    
+
+<div id="ana_div"> 
+<div class="div" id="div">  <form action="DepartmentServlet" method="POST">
+    <h4 align="center">   ADD DEPARTMENT  </h4>
+    Department Name: <input type="text" name="depName">
+    <input type="submit" value="add Dep" /><br /></form>
+
+  <form action="PersonServlet" method="POST">
+    <h4 align="center">   ADD PERSON </h4>
+    First Name ->: <input type="text" name="first_name">
+    <br />
+    Last Name  ->: <input type="text" name="last_name" />
+    <input type="submit" value="Add me" /> <br /> </form>
+    
+ <form action="PhoneServlet" method="POST">
+  <h4 align="center">   ADD PHONE  </h4>
+   Phone Number ->: <input type="text" name="tel">
+  <input type="submit" value="add Phone" /> </form> </div>
+
+<form action="getPersons" method="POST" >
+  <input type="submit" value="list / Refresh Tables" /> </form>
+ 
+
+</div><!--#Ana Div Bitis-->
+
+  
+</body>
+
+</html>

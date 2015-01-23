@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" id="WebApp_ID" version="3.0">
+  <display-name>ServletContextListener</display-name>
+  <context-param>
+    <param-name>DBUSER</param-name>
+    <param-value>alnyli</param-value>
+  </context-param>
+  <context-param>
+    <param-name>DBPWD</param-name>
+    <param-value>a1234b</param-value>
+  </context-param>
+  <context-param>
+    <param-name>DBURL</param-name>
+    <param-value>jdbc:postgresql://localhost:5432/postgres</param-value>
+  </context-param>
+  <listener>
+    <listener-class>com.alnyli.service.servlet.ContextInitilazer</listener-class>
+  </listener>
+  
+  <servlet>
+    <servlet-name>getPersons</servlet-name>
+    <servlet-class>com.alnyli.service.servlet.ListDBSrvlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+		<servlet-name>getPersons</servlet-name>
+		<url-pattern>/getPersons</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>DepartmentServlet</servlet-name>
+    <servlet-class>com.alnyli.service.servlet.DepartmentServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+		<servlet-name>DepartmentServlet</servlet-name>
+		<url-pattern>/DepartmentServlet</url-pattern>
+  </servlet-mapping>
+  
+  
+   <servlet>
+    <servlet-name>addMulti</servlet-name>
+    <servlet-class>com.alnyli.service.servlet.MultiAddServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+		<servlet-name>addMulti</servlet-name>
+		<url-pattern>/addMulti</url-pattern>
+  </servlet-mapping>
+   
+   <servlet>
+    <servlet-name>PersonServlet</servlet-name>
+    <servlet-class>com.alnyli.service.servlet.PersonServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+		<servlet-name>PersonServlet</servlet-name>
+		<url-pattern>/PersonServlet</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>PhoneServlet</servlet-name>
+    <servlet-class>com.alnyli.service.servlet.PhoneServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+		<servlet-name>PhoneServlet</servlet-name>
+		<url-pattern>/PhoneServlet</url-pattern>
+  </servlet-mapping>
+  
+     <servlet>
+    <servlet-name>ResetServlet</servlet-name>
+    <servlet-class>com.alnyli.service.servlet.ResetServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+		<servlet-name>ResetServlet</servlet-name>
+		<url-pattern>/ResetServlet</url-pattern>
+  </servlet-mapping>
+  
+</web-app>
